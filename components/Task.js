@@ -1,13 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { CheckBox } from 'react-native-elements';
 
-const Task = ({ task, onDelete }) => {
+const Task = ({ task, onDelete, onToggleComplete, onEdit }) => {
   return (
     <View style={styles.taskContainer}>
-      <Text style={styles.taskText}>{task}</Text>
-      <TouchableOpacity onPress={onDelete}>
-        <Text style={styles.deleteText}>Done</Text>
-      </TouchableOpacity>
+      <CheckBox
+        checked={task.completed}
+        onPress={() => onToggleComplete(task.id)}
+      />
+      <Text style={[styles.taskText, task.completed && styles.completedTask]}>
+        {task.text}
+      </Text>
+      <View style={styles.actions}>
+        <TouchableOpacity onPress={() => onEdit(task)}>
+          <Text style={styles.editText}>Edit</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => onDelete(task.id)}>
+          <Text style={styles.deleteText}>Delete</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -16,17 +28,29 @@ const styles = StyleSheet.create({
   taskContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
-    marginTop: 10,
   },
   taskText: {
     fontSize: 16,
-    marginRight: 16,
+    flexWrap: 'wrap',
+  },
+  completedTask: {
+    textDecorationLine: 'line-through',
+    color: '#aaa',
+  },
+  actions: {
+    flexDirection: 'row',
+  },
+  editText: {
+    color: 'blue',
+    marginRight: 10,
+    marginLeft: 32,
   },
   deleteText: {
-    color: '#FF574D',
+    color: 'red',
   },
 });
 
