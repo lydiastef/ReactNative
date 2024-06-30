@@ -1,51 +1,45 @@
-# Welcome to your Expo app 👋
+To-Do List App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple to-do list app made with React Native and Expo. It lets you add, edit, and delete tasks. You can also mark tasks as completed. The tasks you add will stay even after you close the app.
 
-## Get started
+Features:
+Add new tasks
+Edit tasks
+Delete tasks
+Mark tasks as completed
 
-1. Install dependencies
+Getting Started:
+Follow these steps to run the app on your own device.
 
-   ```bash
-   npm install
-   ```
+Prerequisites:
+You need Node.js and npm installed on your computer.
 
-2. Start the app
+Install Expo CLI by running this command in your terminal:
+npm install -g expo-cli
 
-   ```bash
-    npx expo start
-   ```
+Clone the repository:
+git clone https://github.com/lydiastef/ReactNative
+cd todo-list-app
 
-In the output, you'll find options to open the app in a
+Install dependencies:
+npm install
+npm start
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Run the app on your phone:
+Download the Expo Go app from the App Store or Google Play Store.
+Open Expo Go and scan the QR code from the terminal or Expo Developer Tools in your browser.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+How to Use the App
 
-## Get a fresh project
+Add a Task:
+Type your task in the input field and press "Add Task".
 
-When you're ready, run:
+Edit a Task:
+Press the "Edit" button next to the task, change the text, and save.
 
-```bash
-npm run reset-project
-```
+Delete a Task:
+Press the "Delete" button next to the task.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Mark a Task as Completed:
+Tap the checkbox next to the task to mark it as done.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# ReactNative
